@@ -196,6 +196,8 @@ a:any-link {
   font: var(--TEXT-PRESET-6-MOB);
   color: var(--NEUTRAL-900);
   letter-spacing: -1px;
+
+  text-wrap: nowrap;
 }
 
 /* HEADER CTA REVIEW */
@@ -398,6 +400,7 @@ a:any-link {
 }
 
 .main__membership-subscriptions {
+  max-width: 340px;
   display: flex;
   flex-flow: column;
   gap: 1.5rem;
@@ -504,7 +507,7 @@ a:any-link {
   background-image: url(./images/mobile_member_blue_blur.svg);
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-size: 315px 153px;
+  background-size: 340px 276px;
 }
 
 /* MAIN QUOTE */
