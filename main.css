@@ -38,6 +38,14 @@ h3 {
   /* GRADIENTS */
   --TEXT-GRADIENT:linear-gradient(107deg, #FF9A60 -11.37%, #062630 61.84%);
   --GRADIENT:linear-gradient(90deg, #FFE2D1 0%, #FFF5EF 100%);
+  --GRADIENT-2:linear-gradient(90deg, #385159 0%, #062630 100%);
+
+  /* SHADOW */
+  --SHADOW-1: 0px 0px 0px 3px var(--NEUTRAL-0);
+  --SHADOW-2: 0px 0px 0px 5px var(--NEUTRAL-700);
+  --SHADOW-3: 0px 0px 0px 3px var(--NEUTRAL-900);
+  --SHADOW-4: 0px 0px 0px 5px var(--NEUTRAL-200);
+
 
   /* TYPOGRAPHY */
   --FF1: "Martian Mono", monospace;
@@ -1216,4 +1224,26 @@ a:any-link {
     width: 1170px;
   }
 
+
+  /* DESKSTOP HOVER */
+  .header__text-content-cta-button:hover,
+  .membership__cta-button:hover {
+    background-image: var(--GRADIENT);
+    cursor: pointer;
+  }
+
+  .footer__text-content-cta-button:hover {
+    background-image: var(--GRADIENT-2);
+    cursor: pointer;
+  }
+
+  /* FOCUS HOVER */
+  .header__text-content-cta-button:focus,
+  .membership__cta-button:focus {
+    box-shadow: var(--SHADOW-1), var(--SHADOW-2);
+  }
+
+  .footer__text-content-cta-button:focus {
+    box-shadow: var(--SHADOW-3), var(--SHADOW-4);
+  }
 }
