@@ -46,13 +46,15 @@ h3 {
   /* TYPE PRESET*/
   --TEXT-PRESET-1: bold 3.9375rem/120% var(--FF1);
   --TEXT-PRESET-2: bold 3.125rem/130% var(--FF1);
+  --TEXT-PRESET-JOURNEY-T: bold 3.125rem/120% var(--FF1);
   --TEXT-PRESET-3: bold 2.125rem/130% var(--FF1);
   --TEXT-PRESET-4: bold 1.5rem/110% var(--FF1);
+  --TEXT-PRESET-NUMBER: normal 1.5rem/1.5rem var(--FF1);
   --TEXT-PRESET-4-REGULAR: normal 1.5rem/120% var(--FF1);
   --TEXT-PRESET-5: normal 1.3125rem/140% var(--FF2);
   --TEXT-PRESET-5-SEMIBOLD: bold 1.25rem/140% var(--FF2);
   --TEXT-PRESET-6: bold 1.125rem/130% var(--FF1);
-  --TEXT-PRESET-7: normal .875rem/120% var(--FF1);;
+  --TEXT-PRESET-7: normal .875rem/120% var(--FF1);
 
   /* TYPE PRESET MOBILE*/
   --TEXT-PRESET-1-MOB: bold 2.375rem/120% var(--FF1);
@@ -100,26 +102,31 @@ body {
 
 a:any-link {
   text-decoration: none;
-  color: black;
 }
 
 /* HEADER */
 .tech-book-club__header {
   width: 100%;
-  min-height: 1103.89px;
+  height: 1103.89px;
   background-color: var(--NEUTRAL-100);
   padding: 1.5rem 1rem 5rem 1rem;
 
   background-image: url("/images/mobile-bg-pattern.svg");
   background-repeat: no-repeat;
-  background-size: 375px 821px;
+  background-size: 100% 100%;
 
   display: flex;
   flex-flow: column;
+  align-items: center;
   gap: 3rem;
 }
 
 /* HEADER LOGO */
+.header__logo-container {
+  width: 343px;
+  margin: 0rem auto;
+}
+
 .header__logo {
   width: 192.86px;
   height: 36px;
@@ -168,7 +175,7 @@ a:any-link {
   font: var(--TEXT-PRESET-5);
   letter-spacing: -0.5px;
   color: var(--NEUTRAL-700);
-  
+  max-width: 343px;
 }
 
 /* HEADER CTA */
@@ -182,18 +189,17 @@ a:any-link {
 
 .header__text-content-cta-button,
 .footer__text-content-cta-button {
+  width: 343px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem 1.25rem;
+  padding: 1.25rem 1.5rem;
   gap: 1rem;
-
-  outline: none;
-  border-style: none;
 
   background-color: var(--LIGHT-SALMON-50);
   border: 2px solid var(--NEUTRAL-900);
-  border-radius: .5rem;
+  border-radius: 8px;
 
   font: var(--TEXT-PRESET-6-MOB);
   color: var(--NEUTRAL-900);
@@ -279,15 +285,14 @@ a:any-link {
   object-fit: cover;
 }
 
-.header__text-content-cta-rating-content-text {
+.header__text-content-cta-rating-content-text,
+.footer__text-content-cta-rating-content-text {
   font: var(--TEXT-PRESET-7);
   letter-spacing: -1px;
   color: var(--NEUTRAL-700);
 }
 
 .footer__text-content-cta-rating-content-text {
-  font: var(--TEXT-PRESET-7);
-  letter-spacing: -1px;
   color: var(--NEUTRAL-0);
 }
 
@@ -369,6 +374,10 @@ a:any-link {
 }
 
 /* MAIN RIGHT TEXT CONTENT */
+.image-right {
+  display: flex;
+  flex-flow: column-reverse;
+}
 
 .main__features-text-content-title2 {
   font: var(--TEXT-PRESET-2-MOB);
@@ -567,7 +576,7 @@ a:any-link {
   background-color: var(--NEUTRAL-900);
   background-image: url(./images/mobile-bg-pattern-down.svg);
   background-repeat: no-repeat;
-  background-size: 375px 541px;
+  background-size: 100% 100%;
 }
 
 .footer__text-content-cta {
@@ -587,6 +596,12 @@ a:any-link {
 }
 
 /* FOOTER CTA */
+.footer__text-content-cta-button-container {
+  display: flex;
+  flex-flow: column;
+  gap: 1.5rem;
+}
+
 .footer__text-content-cta-button {
   background-color: var(--NEUTRAL-900);
   color: var(--NEUTRAL-0);
@@ -620,22 +635,31 @@ a:any-link {
 @media screen and (min-width: 768px) {
   body {
     position: relative;
+    gap: 5rem;
   }
 
   /* HEADER */
   .tech-book-club__header {
-    min-height: 1565px;
+    height: 1565px;
     padding: 2rem 2rem 5rem 2rem;
 
     background-image: url("./images/Tablet-bg-pattern-top.svg"), url("./images/tablet_header_blue_blur.svg");
-    background-size: 768px 1568px, 542px 605px;
+    background-size: 100% 100%, 542px 605px;
     background-position: top left, right bottom;
     gap: 4rem;
   }
 
   /* HEADER CONTENT */
+  .header__logo-container {
+    width: 704px;
+  }
+
   .header__text-content-hero-title {
     font: var(--TEXT-PRESET-1);
+    max-width: 704px;
+  }
+    
+  .header__text-content-hero-subtitle {
     max-width: 704px;
   }
 
@@ -647,11 +671,11 @@ a:any-link {
 
   .header__text-content-cta-button,
   .footer__text-content-cta-button {
-    padding: 1.25rem 1.5rem;
+    width: 380px;
 
     font: var(--TEXT-PRESET-6);
+    
   }
-
 
   /* HEADER CTA REVIEW */
   .header__text-content-cta-rating,
@@ -690,7 +714,7 @@ a:any-link {
     overflow: hidden;
   }
 
-  .tablet-hero-image {
+  .tablet-hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -723,7 +747,7 @@ a:any-link {
     overflow: hidden;
   }
 
-  .image-read-together img {
+  .tablet-main-images img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -883,7 +907,7 @@ a:any-link {
     padding: 4rem 2rem 0rem 2rem;
 
     background-image: url(./images/Tablet-bg-pattern-down.svg);
-    background-size: 768px 504px;
+    background-size: 100% 100%;
   }
 
   .footer__text-content-cta {
@@ -909,6 +933,287 @@ a:any-link {
     width: 768px;
     flex-flow: row;
     justify-content: space-between;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    gap: 7.5rem;
+  }
+
+  /* HEADER */
+  .tech-book-club__header {
+    height: 834px;
+    padding: 2rem 8.4375rem 5rem 8.4375rem;
+
+    background-image: url("./images/desktop-top-bg-pattern.svg"), url("./images/desktop_header_blue_blur.svg");
+    background-size: 100% 100%, 546px 690px;
+    background-position: top left, right bottom;
+    gap: 5rem;
+  }
+
+  /* HEADER CONTENT */
+  .header__logo-container {
+    width: 1184.06px;
+  }
+
+  .header__content {
+    min-height: 606px;
+    flex-flow: row;
+  }
+
+  .header__text-content-hero-title {
+    max-width: 570px;
+  }
+    
+  .header__text-content-hero-subtitle {
+    max-width: 570px;
+  }
+
+  /* HEADER HERO IMAGE */
+  .tablet-hero-image {
+    display: none;
+  }
+
+  .desktop-hero-image {
+    display: block;
+    max-width: 536px;
+    height: 606px;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  .desktop-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* MAIN */
+  .tech-book-club__main {
+    gap: 7.5rem;
+    padding: 0rem 0rem;
+  }
+
+  /* MAIN LEFT */
+  .image-left{
+    max-width: 1170px;
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .checklist {
+    max-width: 431px;
+  }
+
+  .tablet-main-images {
+    display: none;
+  }
+
+  .desktop-main-images {
+    display: block;
+    width: 560px;
+    height: 520px;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  .desktop-main-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* MAIN LEFT TEXT CONTENT */
+  .main__features-text-content {
+    width: 530px;
+  }
+
+  .main__features-text-content-title1 {
+    max-width: 530px;
+  }
+
+  /* MAIN RIGHT TEXT CONTENT */
+  .main__features-container {
+    max-width: 1170px;
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .main__features-text-content-title2 {
+    max-width: 530px;
+  }
+
+  .main__features-text-content-subtitle {
+    max-width: 530px;
+  }
+
+  .main__features-technologies-logos {
+    top: 351px;
+    right: 520px;
+  }
+
+  /* MAIN JOURNEY CONTENT */
+  .main__journey-container {
+    display: block;
+    width: 1170px;
+    height: 454.02px;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 4rem;
+    padding: 5rem 0rem;
+
+    background-color: var(--LIGHT-SALMON-50);
+    border-radius: .75rem;
+    background-image: url("./images/desktop_flow_bg_pattern.svg"), url("./images/desktop_flow_blue_blur.svg");
+    background-repeat: no-repeat;
+    background-size: 1170px 455px, 428px 454px;
+    background-position: top left, bottom right;
+  }
+
+  .main__journey-title {
+    font: var(--TEXT-PRESET-JOURNEY-T);
+    letter-spacing: -4px;
+    color: var(--NEUTRAL-900);
+    max-width: 512px;
+    text-align: center;
+  }
+
+  .main__journey-steps {
+    width: 1050px;
+    display: flex;
+    gap: 3rem;
+  }
+
+  .main__journey-step {
+    width: 226.5px;
+    height: 110px;
+
+    display: flex;
+    flex-flow: column;
+    gap: 1.5rem;
+  }
+
+  .main__journey-step-orders {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main__journey-step-order {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--NEUTRAL-900);
+    border-radius: 4px;
+    padding: .25rem 0rem;
+
+    display: grid;
+    place-content: center;
+
+    font: var(--TEXT-PRESET-NUMBER);
+    letter-spacing: -1px;
+    color: var(--NEUTRAL-900);
+  }
+
+  .forward-arrow {
+    width: 76.74px;
+    height: 20.51px;
+  }
+
+  .forward-arrow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .main__journey-step-content {
+    font: var(--TEXT-PRESET-6);
+    letter-spacing: -1px;
+    color: var(--NEUTRAL-900);
+  }
+
+  /* MAIN MEMBERSHIP */
+  .main__membership-container {
+    width: 970px;
+    height: 519px;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .main__membership-title {
+    max-width: 970px;
+  }
+
+  .main__membership-subscriptions {
+    max-width: 970px;
+    flex-flow: row;
+    align-items: center;
+  }
+
+  .membership-top {
+    width: 660px;
+    align-items: center;
+  }
+
+  .main__membership-subscription {
+    width: 286px;
+    height: 358px;
+  }
+
+  /* MAIN MEMBERSHIP TEXT */
+  .line {
+    width: 238px;
+  }
+
+  /* MAIN MEMBERSHIP CTA BUTTON */
+  .membership__cta-button {
+    height: 63px;
+  }
+
+  .middle {
+    width: 350px;
+    height: 390px;
+    background-image: url(./images/desktop_member_blue_blur.svg);
+    background-size: 350px 296px;
+  }
+
+
+  /* MAIN QUOTE */
+  .main__quote-container {
+    width: 970px;
+    height: 296px;
+    align-items: center;
+  }
+
+  .quote-rating-content-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+
+  /* FOOTER */
+  .tech-book-club__footer {
+    min-height: 521px;
+    gap: 4rem;
+    padding: 5rem 8.4375rem 0rem 8.4375rem;
+
+    background-image: url(./images/desktop-buttom-bg-pattern.svg);
+    background-size: 100% 100%;
+  }
+
+  .footer__text-content-cta {
+    max-width: 753px;
+  }
+
+  /* FOOTER BASE SECTION */
+  .footer__base-content {
+    width: 1170px;
   }
 
 }

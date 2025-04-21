@@ -12,10 +12,12 @@
 </head>
 <body>
     <header class="tech-book-club__header">
-        <figure class="header__logo">
-            <img src="./images/logo.svg" alt="header-logo" width="1440px" height="820px" loading="lazy">
-            <figcaption class="offscreen">header-logo</figcaption>
-        </figure>
+        <section class="header__logo-container">
+            <figure class="header__logo">
+                <img src="./images/logo.svg" alt="header-logo" width="1440px" height="820px" loading="lazy">
+                <figcaption class="offscreen">header-logo</figcaption>
+            </figure>
+        </section>
 
         <section class="header__content">
             <section class="header__text-content">
@@ -25,14 +27,14 @@
                 </section>
 
                 <section class="header__text-content-cta">
-                    <button class="header__text-content-cta-button .nowrap">
+                    <a href="#membership" class="header__text-content-cta-button">
                         <h2 class="header__text-content-cta-button-text">REVIEW MEMBERSHIP OPTIONS</h2>
 
                         <figure class="header__text-content-cta-button-icon">
                             <img src="./images/icon-arrow-down.svg" alt="icon-arrow-down" width="24px" height="25px" loading="lazy">
                             <figcaption class="offscreen">icon-arrow-down</figcaption>
                         </figure>
-                    </button>
+                    </a>
 
                     <section class="header__text-content-cta-rating">
                         <section class="header__text-content-cta-rating-images">
@@ -109,7 +111,7 @@
     <main class="tech-book-club__main">
         <section class="main__features-container image-left">
 
-            <section class="main__features-text-content image-left">
+            <section class="main__features-text-content">
                 <h2 class="main__features-text-content-title1">Read together, grow together</h2>
 
                 <ul class="checklist">
@@ -138,7 +140,22 @@
         </section>
 
         <section class="main__features-container image-right">
-            <section class="main__features-text-content image-right">
+            <figure class="main-images">
+                <img src="./images/image-not-average-mobile.webp" alt="image-not-average" width="686px" height="638px" loading="lazy">
+                <figcaption class="offscreen">image-not-average</figcaption>
+            </figure>
+
+            <figure class="tablet-main-images responsive-image">
+                <img src="./images/image-not-average-tablet.webp" alt="image-not-average" width="1408px" height="1308px" loading="lazy">
+                <figcaption class="offscreen">image-not-average</figcaption>
+            </figure>
+
+            <figure class="desktop-main-images responsive-image">
+                <img src="./images/image-not-average-desktop.webp" alt="image-not-average" width="1120px" height="1040px" loading="lazy">
+                <figcaption class="offscreen">image-not-average</figcaption>
+            </figure>
+
+            <section class="main__features-text-content ">
                 <figure class="pattern-circle">
                     <img src="./images/pattern-circle.png" alt="pattern-circle" width="160px" height="66px" loading="lazy">
                     <figcaption class="offscreen">pattern-circle</figcaption>
@@ -166,28 +183,14 @@
                     </figure>
                 </div>
             </section>
-
-            <figure class="main-images">
-                <img src="./images/image-not-average-mobile.webp" alt="image-not-average" width="686px" height="638px" loading="lazy">
-                <figcaption class="offscreen">image-not-average</figcaption>
-            </figure>
-
-            <figure class="tablet-main-images responsive-image">
-                <img src="./images/image-not-average-tablet.webp" alt="image-not-average" width="1408px" height="1308px" loading="lazy">
-                <figcaption class="offscreen">image-not-average</figcaption>
-            </figure>
-
-            <figure class="desktop-main-images responsive-image">
-                <img src="./images/image-not-average-desktop.webp" alt="image-not-average" width="1120px" height="1040px" loading="lazy">
-                <figcaption class="offscreen">image-not-average</figcaption>
-            </figure>
-
+           
         </section>
 
         <section class="main__journey-container responsive-image">
             <h2 class="main__journey-title">
                 Your tech reading journey
             </h2>
+
             <section class="main__journey-steps">
                 <div class="main__journey-step">
                     <div class="main__journey-step-orders">
@@ -226,6 +229,7 @@
                     </div>
 
                     <p class="main__journey-step-content">Join our discussion forums</p>
+                </div>
 
                 <div class="main__journey-step">
                     <div class="main__journey-step-orders">
@@ -242,7 +246,7 @@
             </figure>
         </section>
 
-        <section class="main__membership-container">
+        <section class="main__membership-container" id="membership">
             <h2 class="main__membership-title">
                 Membership options
             </h2>
@@ -392,15 +396,15 @@
             <h2 class="footer__text-content-cta-title center">
                 Ready to debug your reading list?
             </h2>
-            <section class="footer__text-content-cta-button-container center">
-                <button class="footer__text-content-cta-button">
+            <section class="footer__text-content-cta-button-container">
+                <a href="#membership" class="footer__text-content-cta-button">
                     <h2 class="footer__text-content-cta-button-text">REVIEW MEMBERSHIP OPTIONS</h2>
     
                     <figure class="footer__text-content-cta-button-icon">
                         <img src="./images/icon-arrow-up.svg" alt="icon-arrow-up" width="24px" height="25px" loading="lazy">
                         <figcaption class="offscreen">icon-arrow-up</figcaption>
                     </figure>
-                </button>
+                </a>
     
                 <section class="footer__text-content-cta-rating">
                     <section class="footer__text-content-cta-rating-images">
